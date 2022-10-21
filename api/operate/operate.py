@@ -6,8 +6,9 @@ from app.operate.operation import Operation
 oper_router = APIRouter()
 
 
-@oper_router.post("/", response_model=OperateResponse)
+@oper_router.post("", response_model=OperateResponse)
 def operation_plus(request: OperateRequest):
+    print(request)
     oper = Operation(request.a, request.b)
     result = oper.plus()
     return {"res": result}

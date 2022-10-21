@@ -1,7 +1,7 @@
 class Operation:
     def __init__(self, first, second):
-        self.first = first
-        self.second = second
+        self.first = float(first)
+        self.second = float(second)
 
     def plus(self):
         return self.first + self.second
